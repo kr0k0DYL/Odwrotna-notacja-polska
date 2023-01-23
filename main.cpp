@@ -5,7 +5,7 @@
 std::stack<int> stos;
 int n, ile;
 
-void tablica_now(std::vector <int>  tablica){
+std::vector <int> SORT(std::vector <int>  tablica){
   int now, j;
   for (int i = 1; i < tablica.size(); i++) {
     now = tablica[i];
@@ -15,11 +15,8 @@ void tablica_now(std::vector <int>  tablica){
       j = j - 1;
     }
     tablica[j + 1] = now;
-    std::cout << "HEL";
   }
-   for (int i = 0; i < tablica.size(); i++) {
-    std::cout << tablica[i] << "   ";
-  }
+  return tablica;
 }
 
 int main() {
@@ -62,7 +59,7 @@ int main() {
       continue;
     }
     if (atom == "print") {
-      std::cout << stos.top();
+     std::cout << stos.top();
       stos.pop();
       continue;
     }
@@ -76,7 +73,7 @@ int main() {
         stos.pop();
         tablica[i] = schowek;
       }
-      tablica_now(tablica);
+    SORT(tablica) = tablica;
    continue;
     }
     int liczba = stoi(atom);
