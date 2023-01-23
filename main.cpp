@@ -59,8 +59,12 @@ int main() {
       continue;
     }
     if (atom == "print") {
-     std::cout << stos.top();
-      stos.pop();
+ int stała;
+      stała = stos.size();
+     for(int i = 0;i < stała; i++){
+       std::cout << stos.top() << std::endl;
+       stos.pop();
+     }
       continue;
     }
     if(atom == "sort") {
